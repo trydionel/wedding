@@ -4,4 +4,6 @@ if 'development' == RAILS_ENV
   Compass.configuration.parse(File.join(RAILS_ROOT, "config", "compass.config"))
   Compass.configuration.environment = RAILS_ENV.to_sym
   Compass.configure_sass_plugin!
+else
+  Sass::Plugin.options[:never_update] = true
 end
