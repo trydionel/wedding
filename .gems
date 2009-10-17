@@ -1,3 +1,5 @@
 authlogic --source gemcutter.org
 paperclip --source gemcutter.org
 will_paginate --source gemcutter.org
+haml --version '>= 2.2.0'
+chriseppstein-compass --version '>= 0.8.7' --source gems.github.com
