@@ -1,0 +1,15 @@
+	<ol>
+		<li>
+			<p>Name:</p>
+			<%= form.text_field :author %>
+		</li>
+		<li>
+			<p>Comment:</p>
+			<%= form.text_area :body %>
+		</li>
+		<li>
+			<%= form.hidden_field :commentable_type, :value => commentable.type if commentable %>
+			<%= form.hidden_field :commentable_id, :value => commentable.id if commentable %>
+			<%= form.submit "Submit" %>
+		</li>
+	</ol>

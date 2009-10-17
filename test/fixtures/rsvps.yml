@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  guest_count: 1
+  phone: 1
+  attending: false
+  message: MyText
+
+two:
+  name: MyString
+  guest_count: 1
+  phone: 1
+  attending: false
+  message: MyText

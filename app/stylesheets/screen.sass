@@ -1,0 +1,67 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset.sass
+
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base.sass
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+
+// List utilities
+@import compass/utilities/lists.sass
+@import compass/utilities/links.sass
+@import compass/utilities/text.sass
+
+!blueprint_font_size = 16px
+
+//Recommended Blueprint configuration with scoping and semantic layout:
++blueprint-typography
++blueprint-debug
+
+!ruby_red = #b82222
+!paper = #F2F0D5
+!content_columns = !blueprint_grid_columns - 2
+
+body
+  +blueprint-interaction
+  :background
+    :color = !ruby_red
+    :image url("/images/ribbon-repeat.jpg")
+    :repeat repeat-x
+  #container
+    +container
+    :background
+      :color = !paper
+    :position relative
+  #countdown
+    :position absolute
+    :top 300px
+    :left 40px
+    +span(4)
+    :font
+      :family "Copperplate Gothic Light", "fantasy"
+  #header
+    +column(!blueprint_grid_columns, true)
+    :height 400px
+    +replace-text("/images/website_header.jpg")
+  #content
+    +column(!content_columns, true)
+    +pull(-1)
+  #footer
+    +column(!blueprint_grid_columns, true)
+    +prepend-top
+    +append-bottom
+    :text-align center
+  #nav, #admin
+    +horizontal-list
+    +column(!content_columns, true)
+    +pull(-1)
+    +append-bottom
+    a
+      +hover-link
+  ol, ul
+    +no-bullets
+    :margin-left 0
+
+//Custom libraries
+@import partials/sidebar.sass

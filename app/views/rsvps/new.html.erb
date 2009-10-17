@@ -1,0 +1,28 @@
+<h3>RSVP</h3>
+<% form_for @rsvp do |f| %>
+	<ol>
+		<li>
+			Please enter your name:
+			<%= f.text_field :name %>
+		</li>
+		<li>
+			Will you be attending the ceremonies?
+			<%= f.select :attending, "<option value='yes'>Yes, I will be in attendance</option><option value='no'>No, I am unable to attend</option>" %>
+		</li>
+		<li>
+			Guests in attendance (including yourself, please):
+			<%= f.text_field :guest_count, :value => 1 %>
+		</li>
+		<li>
+			Please include a phone number we may reach you at (optional):
+			<%= f.text_field :phone %>
+		</li>
+		<li>
+			Message (optional):
+			<%= f.text_area :message %>
+		</li>
+		<li>
+			<%= f.submit "RSVP" %>
+		</li>
+	</ol>
+<% end %>

@@ -1,0 +1,123 @@
+html, body { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+blockquote, q { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; quotes: "" ""; }
+blockquote:before, q:before, blockquote:after, q:after { content: ""; }
+
+th, td, caption { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; text-align: left; font-weight: normal; vertical-align: middle; }
+
+table { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; border-collapse: separate; border-spacing: 0; vertical-align: middle; }
+
+a img { border: none; }
+
+body { line-height: 1.5; font-family: Helvetica Neue, Arial, Helvetica, sans-serif; color: #333333; font-size: 100%; }
+
+h1 { font-weight: normal; color: #222222; font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h1 img { margin: 0; }
+
+h2 { font-weight: normal; color: #222222; font-size: 2em; margin-bottom: 0.75em; }
+
+h3 { font-weight: normal; color: #222222; font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+
+h4 { font-weight: normal; color: #222222; font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+
+h5 { font-weight: normal; color: #222222; font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+
+h6 { font-weight: normal; color: #222222; font-size: 1em; font-weight: bold; }
+
+h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+
+p { margin: 0 0 1.5em; }
+p img.left { display: inline; float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { display: inline; float: right; margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+a { text-decoration: underline; color: #000099; }
+a:visited { color: #000066; }
+a:focus { color: black; }
+a:hover { color: black; }
+a:active { color: #cc0099; }
+
+blockquote { margin: 1.5em; color: #666; font-style: italic; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+dfn { font-style: italic; font-weight: bold; }
+
+sup, sub { line-height: 0; }
+
+abbr, acronym { border-bottom: 1px dotted #666; }
+
+address { margin: 0 0 1.5em; font-style: italic; }
+
+del { color: #666; }
+
+pre { margin: 1.5em 0; white-space: pre; }
+
+pre, code, tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+li ul, li ol { margin: 0 1.5em; }
+
+ul { margin: 0 1.5em 1.5em 1.5em; list-style-type: disc; }
+
+ol { margin: 0 1.5em 1.5em 1.5em; list-style-type: decimal; }
+
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+
+dd { margin-left: 1.5em; }
+
+table { margin-bottom: 1.4em; width: 100%; }
+
+th { font-weight: bold; }
+
+thead th { background: #c3d9ff; }
+
+th, td, caption { padding: 4px 10px 4px 5px; }
+
+tr.even td { background: #e5ecf9; }
+
+tfoot { font-style: italic; }
+
+caption { background: #eee; }
+
+.quiet { color: #666666; }
+
+.loud { color: #111111; }
+
+.showgrid { background: url('/images/grid.png?1255125948'); }
+
+body { background-color: #b82222; background-image: url("/images/ribbon-repeat.jpg"); background-repeat: repeat-x; }
+body .error { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+body .error a { color: #8a1f11; }
+body .notice { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #fff6bf; color: #514721; border-color: #ffd324; }
+body .notice a { color: #514721; }
+body .success { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #e6efc2; color: #264409; border-color: #c6d880; }
+body .success a { color: #264409; }
+body .hide { display: none; }
+body .highlight { background: yellow; }
+body .added { background: #006600; color: white; }
+body .removed { background: #990000; color: white; }
+body #container { width: 750px; margin: 0 auto; overflow: hidden; display: inline-block; background-color: #f2f0d5; position: relative; }
+body #container { display: block; }
+body #countdown { position: absolute; top: 300px; left: 40px; width: 116.667px; font-family: "Copperplate Gothic Light", "fantasy"; }
+body #header { display: inline; float: left; margin-right: 0; width: 750px; height: 400px; text-indent: -9999em; overflow: hidden; background-image: url(/images/website_header.jpg); background-repeat: no-repeat; background-position: 50% 50%; }
+* html body #header { overflow-x: hidden; }
+body #content { display: inline; float: left; margin-right: 0; width: 686.667px; display: inline; float: left; position: relative; margin-left: 31.667px; }
+* html body #content { overflow-x: hidden; }
+body #footer { display: inline; float: left; margin-right: 0; width: 750px; margin-top: 1.5em; margin-bottom: 1.5em; text-align: center; }
+* html body #footer { overflow-x: hidden; }
+body #nav, body #admin { margin: 0; padding: 0; border: 0; outline: 0; overflow: hidden; display: inline-block; display: inline; float: left; margin-right: 0; width: 686.667px; display: inline; float: left; position: relative; margin-left: 31.667px; margin-bottom: 1.5em; }
+body #nav, body #admin { display: block; }
+body #nav li, body #admin li { list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: left; padding-left: 4px; padding-right: 4px; }
+body #nav li.first, body #admin li.first { padding-left: 0px; }
+body #nav li.last, body #admin li.last { padding-right: 0px; }
+* html body #nav, * html body #admin { overflow-x: hidden; }
+body #nav a, body #admin a { text-decoration: none; }
+body #nav a:hover, body #admin a:hover { text-decoration: underline; }
+body ol, body ul { margin-left: 0; }
+body ol li, body ul li { list-style-type: none; margin-left: 0px; }
+
+.block { padding: 1.5em; margin-bottom: 1.5em; background: #e5e5f0; }

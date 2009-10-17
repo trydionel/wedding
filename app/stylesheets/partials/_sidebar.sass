@@ -1,0 +1,11 @@
+!box_background = #e5e5f0
+!box_border = darken(!box_background)
+
+// Mixin +box to create a padded box inside a column.
+=box
+  :padding 1.5em
+  :margin-bottom 1.5em
+  :background = !box_background
+  
+.block
+  +box

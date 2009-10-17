@@ -1,0 +1,16 @@
+<% form_for @photo, :html => { :multipart => true } do |f| %>
+	<%= error_messages_for 'photo' %>
+	<ol>
+		<li>
+			Title
+			<%= f.text_field :title %>
+		</li>
+		<li>
+			Image
+			<%= f.file_field :image %>
+		</li>
+		<li>
+			<%= f.submit "Post Photo" %>
+		</li>
+	</ol>
+<% end %>

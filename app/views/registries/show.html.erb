@@ -1,0 +1,12 @@
+<h3><%= link_to @registry.title, @registry.url, :target => :blank %></h3>
+<p><%= @registry.description %></p>
+
+<%= pluralize(@registry.comments.count, "Comment") %>
+
+<ol id="comments">
+	<%= render @registry.comments %>
+</ol>
+
+<% remote_form_for :comment, :url => registry_comments_path(@registry), :method => :post do |f| %>
+	<%= render :partial => "comments/form", :object => f, :locals => { :commentable => @registry } %>
+<% end %>

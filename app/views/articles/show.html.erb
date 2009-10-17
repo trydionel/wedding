@@ -1,0 +1,11 @@
+<h3><%= @article.title %></h3>
+<p><%= @article.body %></p>
+
+<h4><%= pluralize(@article.comments.count, 'Comment') %></h4>
+<ol id="comments">
+	<%= render @article.comments %>
+</ol>
+
+<% remote_form_for :comment, :url => article_comments_path(@article), :method => :post, :id => "new-comment" do |f| %>
+	<%= render :partial => "comments/form", :object => f, :locals => { :commentable => @article } %>
+<% end %>
