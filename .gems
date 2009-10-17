@@ -1,0 +1,3 @@
+authlogic --source gemcutter.org
+paperclip --source gemcutter.org
+will_paginate --source gemcutter.org
