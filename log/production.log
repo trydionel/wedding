@@ -1,0 +1,15 @@
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-10-17 14:16:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: articles: SELECT * FROM "articles"  ORDER BY created_at DESC LIMIT 5 OFFSET 0):
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:82:in `send'
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:82:in `paginate'
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/collection.rb:87:in `create'
+  /Library/Ruby/Gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:76:in `paginate'
+  app/controllers/articles_controller.rb:3:in `index'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
