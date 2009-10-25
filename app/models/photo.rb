@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
+  belongs_to :gallery
   has_many :comments, :as => :commentable
   has_attached_file :image,
     :styles => { :thumbnail => "100x100>", :large => "800x600>"},

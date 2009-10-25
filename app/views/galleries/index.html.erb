@@ -1,0 +1,7 @@
+<% for gallery in @galleries %>
+  <div class="gallery">
+    <%= image_tag gallery.photos.first.url(:thumbnail) %>
+    <h4><%= gallery.name %></h4>
+    <p><%= gallery.description %></p>
+  </div>
+<% end %>

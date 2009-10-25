@@ -100,9 +100,15 @@ body .hide { display: none; }
 body .highlight { background: yellow; }
 body .added { background: #006600; color: white; }
 body .removed { background: #990000; color: white; }
+body a { color: #777788; text-decoration: none; }
+body a:visited { color: #777788; }
+body a:focus { color: #777788; }
+body a:hover { color: #bbbbbb; }
+body a:active { color: #777788; }
+body a:hover { text-decoration: underline; }
 body #container { width: 750px; margin: 0 auto; overflow: hidden; display: inline-block; background-color: #f2f0d5; position: relative; }
 body #container { display: block; }
-body #countdown { position: absolute; top: 300px; left: 40px; width: 116.667px; font-family: "Copperplate Gothic Light", "fantasy"; }
+body #countdown { position: absolute; top: 300px; left: 40px; width: 116.667px; text-shadow: #fff -2px 2px 2px; font-family: "Copperplate Gothic Light", "fantasy"; }
 body #header { display: inline; float: left; margin-right: 0; width: 750px; height: 400px; text-indent: -9999em; overflow: hidden; background-image: url(/images/website_header.jpg); background-repeat: no-repeat; background-position: 50% 50%; }
 * html body #header { overflow-x: hidden; }
 body #content { display: inline; float: left; margin-right: 0; width: 686.667px; display: inline; float: left; position: relative; margin-left: 31.667px; }
@@ -115,8 +121,8 @@ body #nav li, body #admin li { list-style-type: none; margin-left: 0px; white-sp
 body #nav li.first, body #admin li.first { padding-left: 0px; }
 body #nav li.last, body #admin li.last { padding-right: 0px; }
 * html body #nav, * html body #admin { overflow-x: hidden; }
-body #nav a, body #admin a { text-decoration: none; }
-body #nav a:hover, body #admin a:hover { text-decoration: underline; }
+body #nav a, body #admin a { font-size: 1.5em; text-shadow: #fff -2px 2px 2px; }
+body #nav li, body #admin li { margin-right: 15px; }
 body ol, body ul { margin-left: 0; }
 body ol li, body ul li { list-style-type: none; margin-left: 0px; }
 

@@ -22,13 +22,12 @@
 			<h1>Wedding</h1>
 		</div>
 		<ul id="nav">
-			<li><%= link_to "Wedding Blog", root_path %></li>
+			<li><%= link_to "Blog", root_path %></li>
 			<li><%= link_to "RSVP", new_rsvp_path %></li>
 			<li><%= link_to "General Info", page_path("info") %></li>
 			<li><%= link_to "Our Story", page_path("story") %></li>
-			<li><%= link_to "Event Photos", photos_path %></li>
+			<li><%= link_to "Photos", galleries_path %></li>
 			<li><%= link_to "Registries", registries_path %></li>
-			<li><%= link_to "Reception Music", "#" %></li>
 		</ul>
 		<% if current_user %>
 		  <ul id="admin">
@@ -40,14 +39,15 @@
 		  <%= show_flash %>
 			<%= yield %>
 		</div>
-		<div id="footer">
+		<small id="footer">
 			[
 				<%= link_to "Blog", root_path %> |
+				<%= link_to "RSVP", new_rsvp_path %> |
 			  <%= link_to "Info", page_path("info") %> |
+			  <%= link_to "Story", page_path("story") %> |
 			  <%= link_to "Photos", photos_path %> | 
-			  <%= link_to "Registries", registries_path %> | 
-			  <%= link_to "Music", "#" %> ]
-		</div>	
+			  <%= link_to "Registries", registries_path %> ]
+		</small>	
 	</div>
 </body>
 </html>

@@ -21,6 +21,7 @@
 !ruby_red = #b82222
 !paper = #F2F0D5
 !content_columns = !blueprint_grid_columns - 2
+!link_color = #778
 
 body
   +blueprint-interaction
@@ -28,6 +29,9 @@ body
     :color = !ruby_red
     :image url("/images/ribbon-repeat.jpg")
     :repeat repeat-x
+  a
+    +link-colors(!link_color, #bbb, !link_color, !link_color, !link_color)
+    +hover-link
   #container
     +container
     :background
@@ -38,6 +42,7 @@ body
     :top 300px
     :left 40px
     +span(4)
+    :text-shadow #fff -2px 2px 2px
     :font
       :family "Copperplate Gothic Light", "fantasy"
   #header
@@ -58,7 +63,11 @@ body
     +pull(-1)
     +append-bottom
     a
-      +hover-link
+      :font
+        :size 1.5em
+      :text-shadow #fff -2px 2px 2px
+    li
+      margin-right: 15px
   ol, ul
     +no-bullets
     :margin-left 0
