@@ -6007,3 +6007,11 @@ Rendered articles/_article (7.8ms)
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
 Rendered articles/_article (1.5ms)
 Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-29 19:08:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (32.0ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 169ms (View: 121, DB: 32) | 200 OK [http://localhost/galleries]
