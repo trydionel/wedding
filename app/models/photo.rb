@@ -3,7 +3,11 @@ class Photo < ActiveRecord::Base
   has_many :comments, :as => :commentable
   has_attached_file :image,
     :styles => { :thumbnail => "100x100>", :large => "800x600>"},
-    :convert_options => { :thumbnail => "-strip", :large => "-strip" } 
+    :convert_options => { :thumbnail => "-strip", :large => "-strip" },
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :path => ":attachment/:id/:style.:extension",
+    :bucket => "wedding_photos"
     
   validates_attachment_presence :image
   #validates_attachment_content_type :image, :content_type => %w[ application/jpeg application/jpg application/gif application/x-png ]

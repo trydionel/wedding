@@ -6015,3 +6015,186 @@ Processing GalleriesController#index (for 127.0.0.1 at 2009-10-29 19:08:33) [GET
 Rendering template within layouts/application
 Rendering galleries/index
 Completed in 169ms (View: 121, DB: 32) | 200 OK [http://localhost/galleries]
+  [4;36;1mSQL (7.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20091009221519)
+Migrating to CreateUsers (20091009222326)
+Migrating to CreateComments (20091009234619)
+Migrating to CreateStaticPages (20091009234705)
+Migrating to CreateRegistries (20091009234732)
+Migrating to CreateRsvps (20091010023307)
+Migrating to CreatePhotos (20091010135225)
+Migrating to CreateGalleries (20091017185919)
+  [4;36;1mSQL (30.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("galleries")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("registries")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rsvps")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("static_pages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (25.9ms)[0m   [0;1mDROP TABLE "articles"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "permalink" varchar(255), "body" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author" varchar(255), "body" text, "commentable_id" integer, "commentable_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mDROP TABLE "galleries"[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mDROP TABLE "photos"[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "image_file_name" varchar(255), "image_file_size" integer, "image_content_type" varchar(255), "image_updated_at" datetime, "approved" boolean, "created_at" datetime, "updated_at" datetime, "gallery_id" integer) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mDROP TABLE "registries"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "registries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDROP TABLE "rsvps"[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "rsvps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "guest_count" integer, "phone" integer, "attending" boolean, "message" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mDROP TABLE "static_pages"[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE "static_pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "href" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "persistence_token" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-10-31 19:11:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 187ms (View: 178, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:12:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.5ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+  [4;36;1mGallery Load (0.5ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+  [4;35;1mGallery Create (0.9ms)[0m   [0mINSERT INTO "galleries" ("name", "updated_at", "description", "created_at") VALUES('Test Gallery', '2009-10-31 23:14:35', 'Just a test...', '2009-10-31 23:14:35')[0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" [0m
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" LIMIT 1[0m
+  [4;35;1mPhoto Create (0.8ms)[0m   [0mINSERT INTO "photos" ("image_file_size", "updated_at", "gallery_id", "title", "image_content_type", "approved", "image_updated_at", "image_file_name", "created_at") VALUES(1711877, '2009-10-31 23:17:23', 1, 'Jeff and Alayna', 'image/jpeg', NULL, '2009-10-31 23:17:20', 'DSC00515.jpg', '2009-10-31 23:17:23')[0m
+[paperclip] Saving attachments.
+[paperclip] saving images/1/thumbnail.jpg
+  [4;36;1mPhoto Create (0.8ms)[0m   [0;1mINSERT INTO "photos" ("image_file_size", "updated_at", "gallery_id", "title", "image_content_type", "approved", "image_updated_at", "image_file_name", "created_at") VALUES(1711877, '2009-10-31 23:24:40', 1, 'Jeff and Alayna', 'image/jpeg', NULL, '2009-10-31 23:24:37', 'DSC00515.jpg', '2009-10-31 23:24:40')[0m
+[paperclip] Saving attachments.
+[paperclip] saving images/1/thumbnail.jpg
+[paperclip] saving images/1/original.jpg
+[paperclip] saving images/1/large.jpg
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:25:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (1.8ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `url' for #<Photo:0x2287970>) on line #3 of app/views/galleries/index.html.erb:
+1: <% for gallery in @galleries %>
+2:   <div class="gallery">
+3:     <%= image_tag gallery.photos.first.url(:thumbnail) %>
+4:     <h4><%= gallery.name %></h4>
+5:     <p><%= gallery.description %></p>
+6:   </div>
+
+    app/views/galleries/index.html.erb:3
+    app/views/galleries/index.html.erb:1:in `each'
+    app/views/galleries/index.html.erb:1
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (49.8ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:26:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+
+ActionView::TemplateError (no such file to load -- aws/s3 (You may need to install the aws-s3 gem)) on line #3 of app/views/galleries/index.html.erb:
+1: <% for gallery in @galleries %>
+2:   <div class="gallery">
+3:     <%= image_tag gallery.photos.first.image.url(:thumbnail) %>
+4:     <h4><%= gallery.name %></h4>
+5:     <p><%= gallery.description %></p>
+6:   </div>
+
+    paperclip (2.3.1.1) lib/paperclip/storage.rb:131:in `extended'
+    paperclip (2.3.1.1) lib/paperclip/attachment.rb:348:in `extend'
+    paperclip (2.3.1.1) lib/paperclip/attachment.rb:348:in `initialize_storage'
+    paperclip (2.3.1.1) lib/paperclip/attachment.rb:53:in `initialize'
+    paperclip (2.3.1.1) lib/paperclip.rb:322:in `new'
+    paperclip (2.3.1.1) lib/paperclip.rb:322:in `attachment_for'
+    paperclip (2.3.1.1) lib/paperclip.rb:228:in `image'
+    app/views/galleries/index.html.erb:3
+    app/views/galleries/index.html.erb:1:in `each'
+    app/views/galleries/index.html.erb:1
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (123.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:26:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.8ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+Completed in 613ms (View: 604, DB: 1) | 200 OK [http://0.0.0.0/galleries]
