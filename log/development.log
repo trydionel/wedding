@@ -6198,3 +6198,23 @@ Rendering template within layouts/application
 Rendering galleries/index
   [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
 Completed in 613ms (View: 604, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:32:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+Completed in 43ms (View: 35, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:32:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (69.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+Completed in 111ms (View: 34, DB: 71) | 200 OK [http://0.0.0.0/galleries]

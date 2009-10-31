@@ -1,6 +1,6 @@
 <% for gallery in @galleries %>
   <div class="gallery">
-    <%= image_tag gallery.photos.first.image.url(:thumbnail) %>
+    <%= image_tag gallery.preview_thumbnail_url %>
     <h4><%= gallery.name %></h4>
     <p><%= gallery.description %></p>
   </div>
