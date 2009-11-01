@@ -6218,3 +6218,334 @@ Rendering galleries/index
   [4;36;1mSQL (69.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
   [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
 Completed in 111ms (View: 34, DB: 71) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:39:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `photos_path' for #<ActionView::Base:0x2624ac4>) on line #48 of app/views/layouts/application.html.erb:
+45: 				<%= link_to "RSVP", new_rsvp_path %> |
+46: 			  <%= link_to "Info", page_path("info") %> |
+47: 			  <%= link_to "Story", page_path("story") %> |
+48: 			  <%= link_to "Photos", photos_path %> | 
+49: 			  <%= link_to "Registries", registries_path %> ]
+50: 		</small>	
+51: 	</div>
+
+    app/views/layouts/application.html.erb:48
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 19:39:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+Completed in 47ms (View: 39, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:39:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Completed in 40ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 1[0m
+  [4;35;1mPhoto Update (0.5ms)[0m   [0mUPDATE "photos" SET "approved" = 't', "updated_at" = '2009-10-31 23:41:04' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:41:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (4.5ms)
+Completed in 47ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:44:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (5.1ms)
+Completed in 42ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:45:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+
+ActionView::TemplateError (new_gallery_photo_url failed to generate from {:action=>"new", :controller=>"photos"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["galleries", :gallery_id, "photos", "new"] - are they all satisfied?) on line #2 of app/views/galleries/show.html.erb:
+1: <h3><%= @gallery.name %></h3>
+2: <%= link_to "Add a photo!", new_gallery_photo_path %>
+3: <% for photo in @photos %>
+4:   <%= render photo %>
+5: <% end%>
+
+    (eval):20:in `new_gallery_photo_path'
+    app/views/galleries/show.html.erb:2
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:46:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (5.8ms)
+Completed in 45ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:46:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (4.7ms)
+Completed in 43ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2009-10-31 19:46:31) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"new", "controller"=>"photos"}
+Rendering template within layouts/application
+Rendering photos/new
+
+ActionView::TemplateError (undefined method `photos_path' for #<ActionView::Base:0x258c8c8>) on line #1 of app/views/photos/new.html.erb:
+1: <% form_for @photo, :html => { :multipart => true } do |f| %>
+2: 	<%= error_messages_for 'photo' %>
+3: 	<ol>
+4: 		<li>
+
+    app/views/photos/new.html.erb:1
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2009-10-31 19:47:28) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"new", "controller"=>"photos"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Completed in 39ms (View: 26, DB: 0) | 200 OK [http://0.0.0.0/galleries/1/photos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-31 19:47:57) [POST]
+  Parameters: {"photo"=>{"gallery_id"=>"1", "title"=>"At the Portland Chinese Gardens", "image"=>#<File:/var/folders/ax/axKp-ApCFY8pu3RMMIXBG++++TI/-Tmp-/RackMultipart.1156.0>}, "commit"=>"Post Photo", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw="}
+
+ActionController::MethodNotAllowed (Only get requests are allowed.):
+  
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2009-10-31 19:48:14) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"new", "controller"=>"photos"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Completed in 36ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/galleries/1/photos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-31 19:48:16) [POST]
+  Parameters: {"photo"=>{"gallery_id"=>"1", "title"=>"At the Portland Chinese Gardens", "image"=>#<File:/var/folders/ax/axKp-ApCFY8pu3RMMIXBG++++TI/-Tmp-/RackMultipart.1156.0>}, "commit"=>"Post Photo", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw="}
+
+ActionController::MethodNotAllowed (Only get requests are allowed.):
+  
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2009-10-31 19:48:58) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"new", "controller"=>"photos"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Completed in 38ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2009-10-31 19:49:05) [POST]
+  Parameters: {"photo"=>{"gallery_id"=>"1", "title"=>"At the Portland Chinese Gardens", "image"=>#<File:/var/folders/ax/axKp-ApCFY8pu3RMMIXBG++++TI/-Tmp-/RackMultipart.1156.1>}, "gallery_id"=>"1", "commit"=>"Post Photo", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"photos"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.6ms)[0m   [0;1mINSERT INTO "photos" ("image_file_size", "updated_at", "gallery_id", "title", "image_content_type", "approved", "image_updated_at", "image_file_name", "created_at") VALUES(1743821, '2009-10-31 23:49:09', 1, 'At the Portland Chinese Gardens', 'image/jpeg', NULL, '2009-10-31 23:49:05', 'DSC00500.JPG', '2009-10-31 23:49:09')[0m
+[paperclip] Saving attachments.
+[paperclip] saving images/2/large.JPG
+[paperclip] saving images/2/thumbnail.JPG
+[paperclip] saving images/2/original.JPG
+Redirected to http://0.0.0.0:3000/galleries/1/photos
+Completed in 7057ms (DB: 1) | 302 Found [http://0.0.0.0/galleries/1/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2009-10-31 19:49:12) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"index", "controller"=>"photos"}
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #3 of app/views/photos/index.html.erb:
+1: <h3>Photos</h3>
+2: <ol>
+3: 	<%= render @photos %>
+4: </ol>
+
+    app/views/photos/index.html.erb:3
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (119.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2009-10-31 19:49:20) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"index", "controller"=>"photos"}
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.include?) on line #3 of app/views/photos/index.html.erb:
+1: <h3>Photos</h3>
+2: <ol>
+3: 	<%= render @photos %>
+4: </ol>
+
+    app/views/photos/index.html.erb:3
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (45.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:50:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (4.9ms)
+Completed in 40ms (View: 22, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+  [4;36;1mPhoto Load (0.7ms)[0m   [0;1mSELECT * FROM "photos" [0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM "photos" ORDER BY photos.id DESC LIMIT 1[0m
+  [4;36;1mPhoto Update (0.9ms)[0m   [0;1mUPDATE "photos" SET "approved" = 't', "updated_at" = '2009-10-31 23:51:21' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] Saving attachments.
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 19:51:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (4.7ms)
+Rendered photos/_photo (4.3ms)
+Completed in 43ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-10-31 20:25:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+Completed in 43ms (View: 35, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 20:25:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (5.5ms)
+Rendered photos/_photo (4.7ms)
+Completed in 47ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2009-10-31 20:25:35) [GET]
+  Parameters: {"gallery_id"=>"1", "action"=>"new", "controller"=>"photos"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Completed in 39ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2009-10-31 20:25:40) [POST]
+  Parameters: {"photo"=>{"gallery_id"=>"1", "title"=>""}, "gallery_id"=>"1", "commit"=>"Post Photo", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"photos"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Completed in 41ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/galleries/1/photos]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2009-10-31 20:25:55) [POST]
+  Parameters: {"photo"=>{"gallery_id"=>"1", "title"=>"Tester", "image"=>#<File:/var/folders/ax/axKp-ApCFY8pu3RMMIXBG++++TI/-Tmp-/RackMultipart.1156.0>}, "gallery_id"=>"1", "commit"=>"Post Photo", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"photos"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.9ms)[0m   [0;1mINSERT INTO "photos" ("image_file_size", "updated_at", "gallery_id", "title", "image_content_type", "approved", "image_updated_at", "image_file_name", "created_at") VALUES(1836213, '2009-11-01 00:25:58', 1, 'Tester', 'image/jpeg', NULL, '2009-11-01 00:25:55', 'DSC00454.JPG', '2009-11-01 00:25:58')[0m
+[paperclip] Saving attachments.
+[paperclip] saving images/3/large.JPG
+[paperclip] saving images/3/thumbnail.JPG
+[paperclip] saving images/3/original.JPG
+Redirected to http://0.0.0.0:3000/galleries/1
+Completed in 6082ms (DB: 1) | 302 Found [http://0.0.0.0/galleries/1/photos]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-10-31 20:26:01) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+Rendered photos/_photo (5.4ms)
+Rendered photos/_photo (5.2ms)
+Completed in 49ms (View: 29, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]

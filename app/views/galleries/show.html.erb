@@ -1,4 +1,5 @@
 <h3><%= @gallery.name %></h3>
+<p><%= link_to "Add a photo!", new_gallery_photo_path(@gallery) %></p>
 <% for photo in @photos %>
   <%= render photo %>
 <% end%>

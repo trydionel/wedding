@@ -5,6 +5,7 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
+    @gallery = Gallery.find(params[:gallery_id])
   end
   
   def create
@@ -12,7 +13,7 @@ class PhotosController < ApplicationController
     @photo = @gallery.photos.build(params[:photo])
     if @photo.save
       flash[:notice] = "Thank you for posting.  We will approve your photo shortly."
-      redirect_to :action => 'index'
+      redirect_to gallery_path(@gallery)
     else
       render :action => 'new'
     end

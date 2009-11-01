@@ -7,10 +7,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.with_options :has_many => :comments, :shallow => true do |commentable|
     commentable.resources :articles, :only => [:index, :show]
-    commentable.resources :galleries, :only => [:index, :show]
-    commentable.resources :photos, :only => [:show, :new, :create]
     commentable.resources :registries, :only => [:index, :show]
   end
+  map.resources :galleries, :only => [:index, :show] do |gallery|
+    gallery.resources :photos, :has_many => :comments
+    gallery.resources :comments
+  end
+  
   map.resources :pages, :controller => "StaticPages"
   map.resources :rsvps
 
