@@ -9,3 +9,12 @@
 // Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
 !blueprint_grid_width   = (!blueprint_container_size + !blueprint_grid_margin) / !blueprint_grid_columns - !blueprint_grid_margin
 
+!ruby_red = #b82222
+!paper = #F2F0D5
+!content_columns = !blueprint_grid_columns - 2
+!link_color = #778
+
+=drop-shadow(!color, !x_offset, !y_offset, !blur)
+  :-moz-box-shadow = !color !x_offset !y_offset !blur
+  :-webkit-box-shadow = !color !x_offset !y_offset !blur
+  :box-shadow = !color !x_offset !y_offset !blur

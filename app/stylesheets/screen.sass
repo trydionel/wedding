@@ -18,28 +18,37 @@
 +blueprint-typography
 +blueprint-debug
 
-!ruby_red = #b82222
-!paper = #F2F0D5
-!content_columns = !blueprint_grid_columns - 2
-!link_color = #778
-
 body
   +blueprint-interaction
   :background
     :color = !ruby_red
     :image url("/images/ribbon-repeat.jpg")
     :repeat repeat-x
+    :position 0 166px
+    
   a
     +link-colors(!link_color, #bbb, !link_color, !link_color, !link_color)
     +hover-link
+    
+  #poppy
+    :position absolute
+    :top 20px
+    :left 50%
+    :margin-left 10px
+    :width 467px
+    :height 350px
+    :z-index 100
+    :overflow visible
   #container
     +container
+    +drop-shadow(#333, 0px, 0px, 25px)
     :background
       :color = !paper
     :position relative
+    :margin-top 75px
   #countdown
     :position absolute
-    :top 300px
+    :top 225px
     :left 40px
     +span(4)
     :text-shadow #fff -2px 2px 2px
@@ -47,30 +56,40 @@ body
       :family "Copperplate Gothic Light", "fantasy"
   #header
     +column(!blueprint_grid_columns, true)
-    :height 400px
+    :height 325px
     +replace-text("/images/website_header.jpg")
   #content
     +column(!content_columns, true)
     +pull(-1)
+    
   #footer
     +column(!blueprint_grid_columns, true)
     +prepend-top
     +append-bottom
     :text-align center
+    a
+      :color = !ruby_red
+    a.current
+      :color = !link_color
+    
   #nav, #admin
     +horizontal-list
     +column(!content_columns, true)
     +pull(-1)
-    +append-bottom
-    a
-      :font
-        :size 1.5em
-      :text-shadow #fff -2px 2px 2px
+    +append-bottom(3em)
     li
       margin-right: 15px
+      a
+        :color = !ruby_red
+        :font-size 1.5em
+        :text-shadow #c99 0px 0px 1px
+      a.current
+        :color = !link_color
+        :text-shadow #ccc 0px 0px 1px
+        
   ol, ul
     +no-bullets
     :margin-left 0
 
 //Custom libraries
-@import partials/sidebar.sass
+@import partials/gallery.sass

@@ -1,0 +1,26 @@
+@import partials/base.sass
+@import blueprint/modules/link_icons.sass
+
+#gallery
+  :position relative
+
+  a
+    +link-colors(#000, !ruby_red, #000, #000, #000)
+  
+  #gallery_title
+    :text-align center
+
+  #add_photo
+    :position absolute
+    :top 1em
+    :right 0
+    :padding 2px 0 2px 22px
+    :margin -2px 0
+    :background
+      :repeat no-repeat
+      :position left center
+      :image url("/images/plus_circle.png")
+  
+  div.photo
+    +column(!blueprint_grid_columns / 4)
+    :text-align center

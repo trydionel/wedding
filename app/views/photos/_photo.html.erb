@@ -1,4 +1,6 @@
-<% link_to photo.image.url(:large) do %>
-  <%= image_tag photo.image.url(:thumbnail) %>
-  <p><%= photo.title %></p>
-<% end %>
+<div class="photo">
+  <% link_to photo.image.url(:large) do %>
+    <%= image_tag photo.image.url(:thumbnail) %>
+    <p><%= photo.title %></p>
+  <% end %>
+</div>

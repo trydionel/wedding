@@ -3,6 +3,7 @@ class Photo < ActiveRecord::Base
   has_many :comments, :as => :commentable
   has_attached_file :image,
     :styles => { :thumbnail => "100x100>", :large => "800x600>"},
+    :convert => { :all => "-auto-orient" },
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
     :path => ":attachment/:id/:style.:extension",
