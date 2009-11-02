@@ -2,15 +2,14 @@
 	<%= error_messages_for 'photo' %>
 	<ol>
 		<li>
-			Title
+			<%= f.label :title %>
 			<%= f.text_field :title %>
 		</li>
 		<li>
-			Image
+			<%= f.label :image %>
 			<%= f.file_field :image %>
 		</li>
 		<li>
-		  <%= f.hidden_field :gallery_id, :value => @gallery.id %>
 			<%= f.submit "Post Photo" %>
 		</li>
 	</ol>

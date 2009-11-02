@@ -1,0 +1,34 @@
+@import partials/base.sass
+
+!unfocused_border_color = #bbb
+!focused_border_color = #666
+!form_width = 3 * !blueprint_grid_columns / 4
+
+form
+  +column(!form_width, true)
+  +push(-2)
+  
+  ol, ul
+    :margin 0
+    :padding 0
+  
+  label, input[type="text"], input[type="file"], textarea, select
+    :width = !blueprint_grid_width * !form_width + (!blueprint_grid_margin * (!form_width - 1)) - 12px
+    
+  input, select, textarea
+    :font-size 1em
+    :margin-bottom 0.5em
+    :border = 1px "solid" !unfocused_border_color
+    &:focus
+      :border = 1px "solid" !focused_border_color
+  
+  input, textarea
+    :padding 5px
+  
+  input[type="submit"]
+    +span(4)
+    :font-size 1em
+    :display block
+    :margin
+      :left auto
+      :right auto

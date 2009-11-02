@@ -7,7 +7,7 @@
 // Import all the default blueprint modules so that we can access their mixins.
 @import blueprint
 
-// List utilities
+// Utilities
 @import compass/utilities/lists.sass
 @import compass/utilities/links.sass
 @import compass/utilities/text.sass
@@ -20,14 +20,19 @@
 
 body
   +blueprint-interaction
+  +blueprint-utilities
+  
   :background
     :color = !ruby_red
     :image url("/images/ribbon-repeat.jpg")
     :repeat repeat-x
     :position 0 166px
+  
+  .notice
+    +success
     
   a
-    +link-colors(!link_color, #bbb, !link_color, !link_color, !link_color)
+    +link-colors(#000, !ruby_red, #000, #000, #000)
     +hover-link
     
   #poppy
@@ -39,6 +44,7 @@ body
     :height 350px
     :z-index 100
     :overflow visible
+    
   #container
     +container
     +drop-shadow(#333, 0px, 0px, 25px)
@@ -46,6 +52,7 @@ body
       :color = !paper
     :position relative
     :margin-top 75px
+    
   #countdown
     :position absolute
     :top 225px
@@ -54,10 +61,12 @@ body
     :text-shadow #fff -2px 2px 2px
     :font
       :family "Copperplate Gothic Light", "fantasy"
+      
   #header
     +column(!blueprint_grid_columns, true)
     :height 325px
     +replace-text("/images/website_header.jpg")
+    
   #content
     +column(!content_columns, true)
     +pull(-1)
@@ -83,13 +92,19 @@ body
         :color = !ruby_red
         :font-size 1.5em
         :text-shadow #c99 0px 0px 1px
-      a.current
-        :color = !link_color
-        :text-shadow #ccc 0px 0px 1px
-        
+        &.current
+          :color = !link_color
+          :text-shadow #ccc 0px 0px 1px
+  
+  #admin
+    li
+      a
+        :font-size 1em
+      
   ol, ul
     +no-bullets
     :margin-left 0
 
 //Custom libraries
 @import partials/gallery.sass
+@import partials/form.sass

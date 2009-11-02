@@ -14,12 +14,12 @@ ActionController::Routing::Routes.draw do |map|
     gallery.resources :comments
   end
   
-  map.resources :pages, :controller => "StaticPages"
   map.resources :rsvps
 
   map.namespace :admin do |admin|
     admin.resources :articles, :only => [:new, :create, :edit, :update, :destroy]
     admin.resources :photos
+    admin.resources :rsvps, :only => [:index, :show]
   end
   
   map.root :controller => 'articles'

@@ -1,0 +1,12 @@
+<p><%= "#{@count || 0} guests in total" %></p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Attending?</th>
+    <th>Guest Count</th>
+    <th>Phone Number</th>
+    <th>Message</th>
+  </tr>
+  <%= render @rsvps %>
+</table>
+<%= will_paginate @rsvps %>

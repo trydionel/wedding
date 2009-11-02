@@ -19,7 +19,7 @@ class Admin::PhotosController < ApplicationController
     @photo.approved = true
     if @photo.save
       flash[:notice] = "Successfully posted photo"
-      redirect_to photo_path(@photo)
+      redirect_to admin_photo_path(@photo)
     else
       render :action => 'new'
     end
@@ -31,15 +31,18 @@ class Admin::PhotosController < ApplicationController
   def update
     if @photo.update_attributes(params[:photo])
       flash[:notice] = "Successfully updated photo"
-      redirect_to photo_path(@photo)
+      redirect_to admin_photos_path
     else
       render :action => 'edit'
     end
   end
   
   def destroy
-    @photo.destroy
-    redirect_to photos_path
+    if @photo
+      @photo.destroy
+      flash[:notice] = "Successfully deleted photo"
+    end
+    redirect_to admin_photos_path
   end
 
 protected

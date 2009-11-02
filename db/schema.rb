@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091017185919) do
+ActiveRecord::Schema.define(:version => 20091102015538) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20091017185919) do
   create_table "rsvps", :force => true do |t|
     t.string   "name"
     t.integer  "guest_count"
-    t.integer  "phone"
+    t.string   "phone"
     t.boolean  "attending"
     t.text     "message"
     t.datetime "created_at"

@@ -1,25 +1,25 @@
-<h3>RSVP</h3>
 <% form_for @rsvp do |f| %>
+  <%= f.error_messages :header_message => nil, :message => "Please correct the following problems and submit the form again." %>
 	<ol>
 		<li>
-			Please enter your name:
+			<%= f.label :name, "Enter your name:" %>
 			<%= f.text_field :name %>
 		</li>
 		<li>
-			Will you be attending the ceremonies?
-			<%= f.select :attending, "<option value='yes'>Yes, I will be in attendance</option><option value='no'>No, I am unable to attend</option>" %>
+			<%= f.label :attending, "Will you be attending the ceremonies?" %>
+			<%= f.select :attending, "<option value='true'>Yes, I will be in attendance</option><option value='false'>No, I am unable to attend</option>" %>
 		</li>
 		<li>
-			Guests in attendance (including yourself, please):
+			<%= f.label :guest_count, "Guests in attendance (including yourself):" %>
 			<%= f.text_field :guest_count, :value => 1 %>
 		</li>
 		<li>
-			Please include a phone number we may reach you at (optional):
+			<%= f.label :phone, "A phone number we may reach you at (optional):" %>
 			<%= f.text_field :phone %>
 		</li>
 		<li>
-			Message (optional):
-			<%= f.text_area :message %>
+			<%= f.label :message, "Message (optional):" %>
+			<%= f.text_area :message, :rows => 5 %>
 		</li>
 		<li>
 			<%= f.submit "RSVP" %>

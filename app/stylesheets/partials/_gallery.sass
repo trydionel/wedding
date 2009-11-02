@@ -4,9 +4,6 @@
 #gallery
   :position relative
 
-  a
-    +link-colors(#000, !ruby_red, #000, #000, #000)
-  
   #gallery_title
     :text-align center
 
@@ -22,5 +19,8 @@
       :image url("/images/plus_circle.png")
   
   div.photo
-    +column(!blueprint_grid_columns / 4)
+    +column((!blueprint_grid_columns - 2) / 4)
     :text-align center
+  
+  div.last
+    :margin-right 0

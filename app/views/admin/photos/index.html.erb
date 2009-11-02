@@ -1,4 +1,7 @@
-<h3>Photos</h3>
-<ol>
-	<%= render @photos %>
-</ol>
+<div id="gallery">
+  <h3 id="gallery_title">Photos</h3>
+  <table>
+  	<%= render @photos %>
+  </table>
+  <%= will_paginate @photos %>
+</div>
