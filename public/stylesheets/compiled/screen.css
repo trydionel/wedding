@@ -399,6 +399,7 @@ body {
       text-decoration: underline; }
   /* line 38, ../../../app/stylesheets/screen.sass */
   body #poppy {
+    background: url("/images/poppy_alpha.png");
     position: absolute;
     top: 20px;
     left: 50%;
@@ -407,7 +408,7 @@ body {
     height: 350px;
     z-index: 100;
     overflow: visible; }
-  /* line 48, ../../../app/stylesheets/screen.sass */
+  /* line 49, ../../../app/stylesheets/screen.sass */
   body #container {
     width: 750px;
     margin: 0 auto;
@@ -422,7 +423,7 @@ body {
     /* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
     body #container {
       display: block; }
-  /* line 56, ../../../app/stylesheets/screen.sass */
+  /* line 57, ../../../app/stylesheets/screen.sass */
   body #countdown {
     position: absolute;
     top: 225px;
@@ -430,7 +431,7 @@ body {
     width: 116.667px;
     text-shadow: #fff -2px 2px 2px;
     font-family: "Copperplate Gothic Light", "fantasy"; }
-  /* line 65, ../../../app/stylesheets/screen.sass */
+  /* line 66, ../../../app/stylesheets/screen.sass */
   body #header {
     display: inline;
     float: left;
@@ -445,7 +446,7 @@ body {
     /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body #header {
       overflow-x: hidden; }
-  /* line 70, ../../../app/stylesheets/screen.sass */
+  /* line 71, ../../../app/stylesheets/screen.sass */
   body #content {
     display: inline;
     float: left;
@@ -458,7 +459,7 @@ body {
     /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body #content {
       overflow-x: hidden; }
-  /* line 74, ../../../app/stylesheets/screen.sass */
+  /* line 75, ../../../app/stylesheets/screen.sass */
   body #footer {
     display: inline;
     float: left;
@@ -470,13 +471,13 @@ body {
     /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body #footer {
       overflow-x: hidden; }
-    /* line 79, ../../../app/stylesheets/screen.sass */
+    /* line 80, ../../../app/stylesheets/screen.sass */
     body #footer a {
       color: #b82222; }
-    /* line 81, ../../../app/stylesheets/screen.sass */
+    /* line 82, ../../../app/stylesheets/screen.sass */
     body #footer a.current {
       color: #777788; }
-  /* line 84, ../../../app/stylesheets/screen.sass */
+  /* line 85, ../../../app/stylesheets/screen.sass */
   body #nav, body #admin {
     margin: 0;
     padding: 0;
@@ -514,22 +515,22 @@ body {
     /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html body #nav, * html body #admin {
       overflow-x: hidden; }
-    /* line 89, ../../../app/stylesheets/screen.sass */
+    /* line 90, ../../../app/stylesheets/screen.sass */
     body #nav li, body #admin li {
       margin-right: 15px; }
-      /* line 91, ../../../app/stylesheets/screen.sass */
+      /* line 92, ../../../app/stylesheets/screen.sass */
       body #nav li a, body #admin li a {
         color: #b82222;
         font-size: 1.5em;
         text-shadow: #c99 0px 0px 1px; }
-        /* line 95, ../../../app/stylesheets/screen.sass */
+        /* line 96, ../../../app/stylesheets/screen.sass */
         body #nav li a.current, body #admin li a.current {
           color: #777788;
           text-shadow: #ccc 0px 0px 1px; }
-  /* line 101, ../../../app/stylesheets/screen.sass */
+  /* line 102, ../../../app/stylesheets/screen.sass */
   body #admin li a {
     font-size: 1em; }
-  /* line 104, ../../../app/stylesheets/screen.sass */
+  /* line 105, ../../../app/stylesheets/screen.sass */
   body ol, body ul {
     margin-left: 0; }
     /* line 8, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.sass */
