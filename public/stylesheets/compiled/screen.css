@@ -419,7 +419,7 @@ body {
     box-shadow: #333333 0px 0px 25px;
     background-color: #f2f0d5;
     position: relative;
-    margin-top: 75px; }
+    top: 75px; }
     /* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.8.16/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
     body #container {
       display: block; }

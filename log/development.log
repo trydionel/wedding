@@ -10323,3 +10323,69 @@ Rendering template within layouts/application
 Rendering articles/index
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 359ms (View: 31, DB: 320) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:11:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (530.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 18536ms (View: 7964, DB: 530) | 200 OK [http://10.0.2.2/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:12:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 185ms (View: 122, DB: 1) | 200 OK [http://10.0.2.2/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:16:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (288.9ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 420ms (View: 104, DB: 289) | 200 OK [http://10.0.2.2/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:21:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (34.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 128ms (View: 65, DB: 35) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:21:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 36ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:22:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 47ms (View: 35, DB: 1) | 200 OK [http://10.0.2.2/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:22:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 40ms (View: 29, DB: 1) | 200 OK [http://10.0.2.2/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:22:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (4.7ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Completed in 204ms (View: 29, DB: 5) | 200 OK [http://10.0.2.2/]
