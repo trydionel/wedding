@@ -1,12 +1,21 @@
 <% form_for @photo, :url => gallery_photos_path(@gallery), :method => :post, :html => { :multipart => true } do |f| %>
+	<%= trap_door_field %>
 	<%= error_messages_for 'photo' %>
 	<ol>
 		<li>
-			<%= f.label :title %>
+			<%= f.label :author, "Name:" %>
+			<%= f.text_field :author %>
+		</li>
+		<li>
+			<%= f.label :email, "Email: (will not be shown)" %>
+			<%= f.text_field :email %>
+		</li>
+		<li>
+			<%= f.label :title, "Photo Caption:" %>
 			<%= f.text_field :title %>
 		</li>
 		<li>
-			<%= f.label :image %>
+			<%= f.label :image, "File:" %>
 			<%= f.file_field :image %>
 		</li>
 		<li>

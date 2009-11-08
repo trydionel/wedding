@@ -2,3 +2,5 @@
 <blockquote>
 <%= @comment.body %>
 </blockquote>
+
+<p>To view the comment, <%= link_to "click here", polymorphic_url(@comment.commentable) %>.</p>

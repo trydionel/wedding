@@ -1,3 +1,6 @@
-Notifications#new_rsvp
-
-Find me in app/views/notifications/new_rsvp.erb
+<% if @rsvp.attending? %>
+	<p><%= @rsvp.name %> plans to attend the wedding and will bring a total of <%= pluralize(@rsvp.guest_count, "guest") %>.</p>
+<% else %>
+	<p><%= @rsvp.name %> will not be attending the wedding.</p>
+<% end %>
+<p>To view the details of the response, <%= link_to "click here", admin_rsvp_path(@rsvp) %>.</p>

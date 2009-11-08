@@ -1,5 +1,4 @@
 class Notifications < ActionMailer::Base
-
 	%w[comment photo rsvp].each do |type|
 		define_method "new_#{type}" do |object|
 			setup_email

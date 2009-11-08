@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+	trap_door :only => :create
+	
   def show
     @photo = Photo.find(params[:id])
   end
