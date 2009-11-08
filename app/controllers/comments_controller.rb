@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  trap_door :only => :create
   
   def new
     @comment = Comment.new

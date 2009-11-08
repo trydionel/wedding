@@ -10389,3 +10389,435 @@ Processing ArticlesController#index (for 127.0.0.1 at 2009-11-04 21:22:31) [GET]
 Rendering template within layouts/application
 Rendering articles/index
 Completed in 204ms (View: 29, DB: 5) | 200 OK [http://10.0.2.2/]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSQLite3::SQLException: database schema has changed: SELECT * FROM "articles" ORDER BY created_at DESC[0m
+  [4;35;1mArticle Load (33.4ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC[0m
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC[0m
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mArticle Load (0.6ms)[0m   [0mSELECT "articles".id FROM "articles" WHERE (permalink = 'tester-article') ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("permalink", "updated_at", "title", "body", "user_id", "created_at") VALUES('tester-article', '2009-11-08 16:53:44', 'Tester Article', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.
+
+In vehicula. Aenean quam mauris, vehicula non, suscipit at, venenatis sed, arcu. Etiam ornare fermentum felis. Donec ligula metus, placerat quis, blandit at, congue molestie, ante. Donec viverra nibh et dolor. Sed elementum, nunc ac gravida pulvinar, libero ligula vestibulum urna, eget luctus eros ipsum ut velit. Vestibulum at diam. Suspendisse hendrerit. Sed facilisis libero pretium nisl. Morbi eget urna ut mi egestas aliquet. Donec interdum, urna eget semper ultrices, nibh sapien laoreet massa, at laoreet nulla metus sit amet nunc. In augue. Etiam sit amet sapien. Aliquam nulla mi, tincidunt a, ullamcorper pharetra, mollis eu, purus.
+
+Suspendisse auctor nunc a dolor. Donec elit diam, fringilla nec, cursus a, dapibus ut, justo. Maecenas rhoncus lacinia mi. Sed tempus leo in risus. Quisque vitae est. Integer eu mi vel justo lacinia posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec pretium auctor mauris. Cras at risus. Vestibulum ligula purus, venenatis varius, tincidunt aliquam, volutpat ut, felis. In nulla. Suspendisse magna. Fusce ac tortor. Morbi semper hendrerit purus. Donec scelerisque erat quis magna. Vivamus interdum metus at tellus.
+
+Nam molestie suscipit arcu. Sed sed leo non sapien lobortis gravida. Mauris ultricies imperdiet lacus. Maecenas semper sapien in mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc euismod odio eget lectus. Vestibulum nonummy pharetra eros. Donec semper venenatis sapien. Phasellus scelerisque lectus quis tortor. Quisque turpis. Etiam rutrum metus eget nisi. Morbi varius ligula id elit. Ut augue.', 1, '2009-11-08 16:53:44')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mComment Create (0.6ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 16:54:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'A Person', 1, '2009-11-08 16:54:41')[0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 16:54:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'A Person', 1, '2009-11-08 16:54:41')[0m
+  [4;36;1mComment Create (2.7ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 16:54:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'A Person', 1, '2009-11-08 16:54:41')[0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 16:54:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'A Person', 1, '2009-11-08 16:54:41')[0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 16:54:41', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'A Person', 1, '2009-11-08 16:54:41')[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" [0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-08 11:55:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (39.7ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 78ms (View: 66, DB: 4) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 11:55:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (228.6ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (14.0ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 335ms (View: 326, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 11:56:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (1.9ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 169ms (View: 161, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 11:56:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (2.0ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 47ms (View: 38, DB: 1) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 11:56:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (1.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 46ms (View: 38, DB: 1) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 11:58:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering rsvps/new
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 156ms (View: 139, DB: 0) | 200 OK [http://0.0.0.0/rsvps/new]
+
+
+Processing RsvpsController#create (for 127.0.0.1 at 2009-11-08 11:59:23) [POST]
+  Parameters: {"commit"=>"RSVP", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"rsvps", "rsvp"=>{"message"=>"", "name"=>"", "guest_count"=>"one", "phone"=>"", "attending"=>"true"}}
+Rendering template within layouts/application
+Rendering rsvps/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 39ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/rsvps]
+
+
+Processing Admin::RsvpsController#index (for 127.0.0.1 at 2009-11-08 11:59:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/rsvps"}
+  [4;35;1mRsvp Load (0.7ms)[0m   [0mSELECT * FROM "rsvps" LIMIT 30 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT sum("rsvps".guest_count) AS sum_guest_count FROM "rsvps" WHERE ("rsvps"."attending" = 't') [0m
+Rendering template within layouts/application
+Rendering admin/rsvps/index
+Rendered admin/rsvps/_rsvp (1.6ms)
+Rendered admin/rsvps/_rsvp (0.1ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 129ms (View: 120, DB: 1) | 200 OK [http://0.0.0.0/admin/rsvps]
+
+
+Processing Admin::PhotosController#index (for 127.0.0.1 at 2009-11-08 12:00:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/photos"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" LIMIT 6 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering admin/photos/index
+Completed in 47ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/admin/photos]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 12:00:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"info", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/info
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/pages/info]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 12:00:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"story", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/story
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/pages/story]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 12:00:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 70ms (View: 47, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 12:00:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistriesController#index (for 127.0.0.1 at 2009-11-08 12:00:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"registries"}
+  [4;35;1mRegistry Load (0.6ms)[0m   [0mSELECT * FROM "registries" [0m
+Rendering template within layouts/application
+Rendering registries/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 52ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/registries]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-08 12:07:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.3ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (14.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 335ms (View: 35, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 12:07:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+
+ActionView::TemplateError (undefined local variable or method `trap_door_field' for #<ActionView::Base:0x23d7a78>) on line #1 of app/views/comments/_form.html.erb:
+1:   <%= trap_door_field %>
+2: 	<ol>
+3: 		<li>
+4: 			<p>Name:</p>
+
+    app/views/comments/_form.html.erb:1
+    app/views/articles/show.html.erb:10
+    app/views/articles/show.html.erb:9
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (164.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 12:11:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (118.0ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (4.3ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 239ms (View: 228, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 12:15:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (2.2ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 35, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+  [4;36;1mArticle Load (14.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mComment Create (24.1ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:01:30', 'asdf', 'A User', 1, '2009-11-08 18:01:30')[0m
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mComment Create (0.7ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:02:23', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'User', 1, '2009-11-08 18:02:23')[0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:03:06', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'User', 1, '2009-11-08 18:03:06')[0m
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 13:03:06 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+<p>User commented on the Article "Tester Article"</p>
+<blockquote>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.
+</blockquote>
+  [4;36;1mComment Create (0.9ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:06:55', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'User', 1, '2009-11-08 18:06:55')[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 13:06:55 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+<p>User commented on the Article "Tester Article"</p>
+<blockquote>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.
+</blockquote>
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:07:20', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'User', 1, '2009-11-08 18:07:20')[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 13:07:20 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>User commented on the Article "Tester Article"</p>
+<blockquote>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.
+</blockquote>
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20091009221519)
+Migrating to CreateUsers (20091009222326)
+Migrating to CreateComments (20091009234619)
+Migrating to CreateStaticPages (20091009234705)
+Migrating to CreateRegistries (20091009234732)
+Migrating to CreateRsvps (20091010023307)
+Migrating to CreatePhotos (20091010135225)
+Migrating to CreateGalleries (20091017185919)
+Migrating to FixPhoneNumberOnRsvps (20091102015538)
+Migrating to RenameGalleriesNameToTitle (20091108180822)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TEMPORARY TABLE "altered_galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("galleries")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "galleries"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_galleries")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_galleries"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091108180822')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("registries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rsvps")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("static_pages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20091009221519)
+Migrating to CreateUsers (20091009222326)
+Migrating to CreateComments (20091009234619)
+Migrating to CreateStaticPages (20091009234705)
+Migrating to CreateRegistries (20091009234732)
+Migrating to CreateRsvps (20091010023307)
+Migrating to CreatePhotos (20091010135225)
+Migrating to CreateGalleries (20091017185919)
+Migrating to FixPhoneNumberOnRsvps (20091102015538)
+Migrating to RenameGalleriesNameToTitle (20091108180822)
+Migrating to RemoveStaticPages (20091108181017)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "static_pages"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091108181017')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("galleries")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("registries")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rsvps")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at") VALUES('Article', '2009-11-08 18:21:12', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.', 'User', 1, '2009-11-08 18:21:12')[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 13:21:12 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>User commented on the Article "Tester Article"</p>
+<blockquote>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vitae risus vitae lorem iaculis placerat. Aliquam sit amet felis. Etiam congue. Donec risus risus, pretium ac, tincidunt eu, tempor eu, quam. Morbi blandit mollis magna. Suspendisse eu tortor. Donec vitae felis nec ligula blandit rhoncus. Ut a pede ac neque mattis facilisis. Nulla nunc ipsum, sodales vitae, hendrerit non, imperdiet ac, ante. Morbi sit amet mi. Ut magna. Curabitur id est. Nulla velit. Sed consectetuer sodales justo. Aliquam dictum gravida libero. Sed eu turpis. Nunc id lorem. Aenean consequat tempor mi. Phasellus in neque. Nunc fermentum convallis ligula.
+
+Suspendisse in nulla. Nunc eu ipsum tincidunt risus pellentesque fringilla. Integer iaculis pharetra eros. Nam ut sapien quis arcu ullamcorper cursus. Vestibulum tempor nisi rhoncus eros. Sed iaculis ultricies tellus. Cras pellentesque erat eu urna. Cras malesuada. Quisque congue ultricies neque. Nullam a nisl. Sed convallis turpis a ante. Morbi eu justo sed tortor euismod porttitor. Aenean ut lacus. Maecenas nibh eros, dapibus at, pellentesque in, auctor a, enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam congue pede a ipsum. Sed libero quam, sodales eget, venenatis non, cursus vel, velit. In vulputate.
+</blockquote>

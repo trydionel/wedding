@@ -1,5 +1,6 @@
 <% content_tag :li, :id => "comment-#{comment.id}" do %>
 	<h5><%= comment.author %></h5>
+	<small><%= comment.created_at.to_s(:long) %></small>
 	<p><%= comment.body %></p>
-	<small><%= comment.created_at %></small>
+	<hr />
 <% end %>

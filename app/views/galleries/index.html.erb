@@ -2,7 +2,7 @@
   <div class="gallery">
     <% link_to gallery_path(gallery) do %>
       <%= image_tag gallery.preview_thumbnail_url %>
-      <h4><%= gallery.name %></h4>
+      <h4><%= gallery.title %></h4>
       <p><%= gallery.description %></p>
     <% end %>
   </div>
