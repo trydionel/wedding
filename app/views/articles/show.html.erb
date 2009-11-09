@@ -1,5 +1,5 @@
 <h3><%= @article.title %></h3>
-<p><%= @article.body %></p>
+<p><%= RedCloth.new(@article.body).to_html %></p>
 
 <h4><%= pluralize(@article.comments.count, 'Comment') %></h4>
 <ol id="comments">

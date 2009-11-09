@@ -10,10 +10,11 @@ class Photo < ActiveRecord::Base
     :bucket => "wedding_photos"
     
   validates_attachment_presence :image
-  #validates_attachment_content_type :image, :content_type => %w[ application/jpeg application/jpg application/gif application/x-png ]
+  validates_attachment_content_type :image, :content_type => /$image/
   validates_attachment_size :image, :less_than => 10.megabytes
   
   named_scope :approved, :conditions => { :approved => true }
+  after_create :send_notification
   
   def approved?
     approved
@@ -22,5 +23,11 @@ class Photo < ActiveRecord::Base
   def approve!
     update_attribute(:approved, true)
     save!
+  end
+
+protected
+
+  def send_notification
+  	Notifications.deliver_new_photo_notification(self)
   end
 end

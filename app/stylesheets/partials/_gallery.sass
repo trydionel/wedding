@@ -1,6 +1,13 @@
 @import partials/base.sass
 @import blueprint/modules/link_icons.sass
 
+.gallery
+  +column((!blueprint_grid_columns - 2) / 3)
+  :text-align center
+  h4
+    :color inherit
+    :margin-bottom 0
+
 #gallery
   :position relative
 

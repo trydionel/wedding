@@ -1,6 +1,9 @@
 class RsvpsController < ApplicationController
+	trap_door :only => :create
+	
   def new
-    @rsvp = Rsvp.new
+    #@rsvp = Rsvp.new
+    render :template => "rsvps/waiting"
   end
   
   def create

@@ -1,4 +1,4 @@
-<% content_tag :li, :id => "comment-#{comment.id}" do %>
+<% content_tag :li, :id => "comment-#{comment.id}", :class => (comment.highlight? ? "owner comment" : "comment") do %>
 	<h5><%= comment.author %></h5>
 	<small><%= comment.created_at.to_s(:long) %></small>
 	<p><%= comment.body %></p>

@@ -1,5 +1,5 @@
 <li>
 	<h3><%= link_to article.title, article_path(article) %></h3>
-	<p><%= article.body %></p>
+	<p><%= RedCloth.new(article.body).to_html %></p>
 	<p><%= link_to pluralize(article.comments.count, 'Comment'), article_path(article, :anchor => "comments") %></p>
 </li>

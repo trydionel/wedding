@@ -4,3 +4,4 @@ will_paginate --source gemcutter.org
 haml --version '>= 2.2.0'
 compass --version '>= 0.8.7' --source gemcutter.org
 aws-s3
+RedCloth

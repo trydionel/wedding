@@ -10921,3 +10921,930 @@ Migrating to AddEmailToComments (20091108191724)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("registries")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rsvps")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:10:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (229.6ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_form (30.3ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 583ms (View: 524, DB: 3) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-08 18:21:32) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"Here's a test!", "author"=>"Jeff", "commentable_id"=>"1", "email"=>"trydionel@gmail.com"}}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+
+SyntaxError (/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '='
+  	(name ~= "Jeff" && email == "trydionel...
+  	        ^
+/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '='
+...il == "trydionel") || (name ~= "Alayna" && email ~= "thymebo...
+                              ^
+/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '~', expecting kDO or '{' or '('
+...| (name ~= "Alayna" && email ~= "thymebombe")
+                              ^):
+  app/controllers/comments_controller.rb:10:in `create'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-08 18:21:46) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"Here's a test!", "author"=>"Jeff", "commentable_id"=>"1", "email"=>"trydionel@gmail.com"}}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+
+SyntaxError (/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '='
+  	(name ~= "Jeff" && email == "trydionel...
+  	        ^
+/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '='
+...il == "trydionel") || (name ~= "Alayna" && email ~= "thymebo...
+                              ^
+/Users/jmtucker/Sites/wedding/app/models/comment.rb:7: syntax error, unexpected '~', expecting kDO or '{' or '('
+...| (name ~= "Alayna" && email ~= "thymebombe")
+                              ^):
+  app/controllers/comments_controller.rb:10:in `create'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (133.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-08 18:23:49) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"Here's a test!", "author"=>"Jeff", "commentable_id"=>"1", "email"=>"trydionel@gmail.com"}}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+  [4;35;1mComment Create (0.6ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at", "email") VALUES('Article', '2009-11-08 23:23:49', 'Here''s a test!', 'Jeff', 1, '2009-11-08 23:23:49', 'trydionel@gmail.com')[0m
+
+ActionView::MissingTemplate (Missing template notifications/new_comment_notification.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  app/models/comment.rb:13:in `send_notification'
+  app/controllers/comments_controller.rb:11:in `create'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-08 18:24:46) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"Here's a test!", "author"=>"Jeff", "commentable_id"=>"1", "email"=>"trydionel@gmail.com"}}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at", "email") VALUES('Article', '2009-11-08 23:24:46', 'Here''s a test!', 'Jeff', 1, '2009-11-08 23:24:46', 'trydionel@gmail.com')[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 18:24:46 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Jeff commented on the Article "Tester Article"</p>
+<blockquote>
+Here's a test!
+</blockquote>
+
+<p>To view the comment, <a href="http://localhost:3000/articles/1">click here</a>.</p>
+Rendering comments/create
+
+ActionView::TemplateError (undefined local variable or method `name' for #<Comment:0x26237b4>) on line #1 of app/views/comments/_comment.html.erb:
+1: <% content_tag :li, :id => "comment-#{comment.id}", :class => (comment.highlight? ? "highlight" : nil) do %>
+2: 	<h5><%= comment.author %></h5>
+3: 	<small><%= comment.created_at.to_s(:long) %></small>
+4: 	<p><%= comment.body %></p>
+
+    app/models/comment.rb:7:in `highlight?'
+    app/views/comments/_comment.html.erb:1
+    app/views/comments/create.rjs:1:in `__instance_exec0'
+    app/views/comments/create.rjs:1:in `_run_rjs_app47views47comments47create46rjs'
+    app/controllers/comments_controller.rb:18:in `create'
+    app/controllers/comments_controller.rb:12:in `create'
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (59.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-08 18:25:13) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"InZReVkVNvQqypxOKLCTwLpLjX3y1YLaUxZadjPgeYw=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"Here's a test!", "author"=>"Jeff", "commentable_id"=>"1", "email"=>"trydionel@gmail.com"}}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at", "email") VALUES('Article', '2009-11-08 23:25:13', 'Here''s a test!', 'Jeff', 1, '2009-11-08 23:25:13', 'trydionel@gmail.com')[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sun, 8 Nov 2009 18:25:13 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Jeff commented on the Article "Tester Article"</p>
+<blockquote>
+Here's a test!
+</blockquote>
+
+<p>To view the comment, <a href="http://localhost:3000/articles/1">click here</a>.</p>
+Rendering comments/create
+Rendered comments/_comment (0.9ms)
+Completed in 36ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/articles/1/comments]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:27:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (2.8ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 113ms (View: 103, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:27:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (2.9ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 64ms (View: 53, DB: 3) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:28:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.9ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (1.8ms)
+Rendered comments/_comment (3.2ms)
+Rendered comments/_comment (1.8ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_form (2.6ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 89ms (View: 73, DB: 4) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:30:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (2.1ms)
+Rendered comments/_form (2.9ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 195ms (View: 185, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:31:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (3.0ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 65ms (View: 55, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:32:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (2.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 55ms (View: 44, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:32:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (2.9ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 52ms (View: 43, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:33:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (2.9ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 138ms (View: 127, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 18:33:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (2.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 53ms (View: 42, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:33:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering rsvps/new
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 186ms (View: 135, DB: 0) | 200 OK [http://0.0.0.0/rsvps/new]
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:35:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering waiting
+
+ActionView::MissingTemplate (Missing template waiting.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  app/controllers/rsvps_controller.rb:6:in `new'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:36:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+
+ActionView::MissingTemplate (Missing template rsvps/_waiting.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  app/controllers/rsvps_controller.rb:6:in `new'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:36:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+
+ActionView::MissingTemplate (Missing template rsvps/_waiting.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  app/controllers/rsvps_controller.rb:6:in `new'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:36:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering waiting
+
+ActionView::MissingTemplate (Missing template waiting.erb in view path app/views:vendor/plugins/high_voltage/app/views):
+  app/controllers/rsvps_controller.rb:6:in `new'
+  haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 18:36:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering rsvps/waiting
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/rsvps/new]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 18:36:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"info", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/info
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 43ms (View: 35, DB: 0) | 200 OK [http://0.0.0.0/pages/info]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 18:36:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"story", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/story
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 107ms (View: 100, DB: 0) | 200 OK [http://0.0.0.0/pages/story]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:36:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 103ms (View: 79, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:36:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistriesController#index (for 127.0.0.1 at 2009-11-08 18:36:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"registries"}
+  [4;35;1mRegistry Load (0.5ms)[0m   [0mSELECT * FROM "registries" [0m
+Rendering template within layouts/application
+Rendering registries/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 70ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/registries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:36:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 40ms (View: 30, DB: 3) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:36:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:39:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 37ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:39:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:40:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 48ms (View: 40, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:40:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:40:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:40:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:40:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistriesController#index (for 127.0.0.1 at 2009-11-08 18:40:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"registries"}
+  [4;36;1mRegistry Load (0.5ms)[0m   [0;1mSELECT * FROM "registries" [0m
+Rendering template within layouts/application
+Rendering registries/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/registries]
+
+
+Processing RegistriesController#index (for 127.0.0.1 at 2009-11-08 18:41:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"registries"}
+  [4;36;1mRegistry Load (0.5ms)[0m   [0;1mSELECT * FROM "registries" [0m
+Rendering template within layouts/application
+Rendering registries/index
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/registries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:41:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 37, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:41:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:43:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+
+ActionView::TemplateError (undefined local variable or method `gallery_count' for #<ActionView::Base:0x23f62c0>) on line #1 of app/views/galleries/_gallery.html.erb:
+1: <div class="gallery <%= (gallery_count + 1) % 3 == 0 ? 'last' : nil %>">
+2:   <% link_to gallery_path(gallery) do %>
+3:     <%= image_tag gallery.preview_thumbnail_url %>
+4:     <h4><%= gallery.title %></h4>
+
+    app/views/galleries/_gallery.html.erb:1
+    app/views/galleries/index.html.erb:1
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (152.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:44:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+
+ActionView::TemplateError (undefined local variable or method `galleries_count' for #<ActionView::Base:0x242c334>) on line #1 of app/views/galleries/_gallery.html.erb:
+1: <div class="gallery <%= (galleries_count + 1) % 3 == 0 ? 'last' : nil %>">
+2:   <% link_to gallery_path(gallery) do %>
+3:     <%= image_tag gallery.preview_thumbnail_url %>
+4:     <h4><%= gallery.title %></h4>
+
+    app/views/galleries/_gallery.html.erb:1
+    app/views/galleries/index.html.erb:1
+    haml (2.2.7) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    compass (0.8.16) lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (55.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:44:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (10.8ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 44ms (View: 36, DB: 1) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:44:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mGallery Create (0.0ms)[0m   [0mSQLite3::SQLException: database schema has changed: INSERT INTO "galleries" ("updated_at", "title", "description", "created_at") VALUES('2009-11-08 23:45:12', NULL, NULL, '2009-11-08 23:45:12')[0m
+  [4;36;1mGallery Create (0.8ms)[0m   [0;1mINSERT INTO "galleries" ("updated_at", "title", "description", "created_at") VALUES('2009-11-08 23:45:12', NULL, NULL, '2009-11-08 23:45:12')[0m
+  [4;35;1mGallery Create (0.4ms)[0m   [0mINSERT INTO "galleries" ("updated_at", "title", "description", "created_at") VALUES('2009-11-08 23:45:12', NULL, NULL, '2009-11-08 23:45:12')[0m
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:45:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.8ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (10.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.3ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 44ms (View: 35, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:45:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-11-08 18:45:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 59ms (View: 43, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-11-08 18:45:55) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 47ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-11-08 18:46:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 43ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:46:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (85.7ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.6ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 117ms (View: 109, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:46:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:46:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (1.4ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.8ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 42ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:46:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 18:47:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (10.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.2ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 36, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 18:47:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2009-11-08 18:47:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT "photos".* FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) AND (("photos"."approved" = 't') AND ("photos".gallery_id = 1)) LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 38ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/galleries/1]
+
+
+Processing RegistriesController#index (for 127.0.0.1 at 2009-11-08 18:47:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"registries"}
+  [4;36;1mRegistry Load (0.5ms)[0m   [0;1mSELECT * FROM "registries" [0m
+Rendering template within layouts/application
+Rendering registries/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/registries]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 18:47:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"info", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/info
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 26, DB: 0) | 200 OK [http://0.0.0.0/pages/info]
+
+
+Processing HighVoltage::PagesController#show (for 127.0.0.1 at 2009-11-08 18:47:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"story", "controller"=>"high_voltage/pages"}
+Rendering template within layouts/application
+Rendering pages/story
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/pages/story]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-08 18:47:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.3ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (29.2ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 182ms (View: 102, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing Admin::PhotosController#index (for 127.0.0.1 at 2009-11-08 18:47:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/photos"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" LIMIT 6 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering admin/photos/index
+Completed in 41ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/admin/photos]
+
+
+Processing Admin::ArticlesController#new (for 127.0.0.1 at 2009-11-08 18:47:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/articles"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/articles/new
+Rendered admin/articles/_form (13.9ms)
+Completed in 93ms (View: 69, DB: 0) | 200 OK [http://0.0.0.0/admin/articles/new]
+
+
+Processing Admin::RsvpsController#index (for 127.0.0.1 at 2009-11-08 18:47:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/rsvps"}
+  [4;36;1mRsvp Load (0.7ms)[0m   [0;1mSELECT * FROM "rsvps" LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT sum("rsvps".guest_count) AS sum_guest_count FROM "rsvps" WHERE ("rsvps"."attending" = 't') [0m
+Rendering template within layouts/application
+Rendering admin/rsvps/index
+Rendered admin/rsvps/_rsvp (12.1ms)
+Rendered admin/rsvps/_rsvp (0.2ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 63ms (View: 55, DB: 1) | 200 OK [http://0.0.0.0/admin/rsvps]
+
+
+Processing Admin::ArticlesController#new (for 127.0.0.1 at 2009-11-08 18:47:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/articles"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering admin/articles/new
+Rendered admin/articles/_form (3.2ms)
+Completed in 43ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/admin/articles/new]
+
+
+Processing RsvpsController#new (for 127.0.0.1 at 2009-11-08 19:00:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"rsvps"}
+Rendering template within layouts/application
+Rendering rsvps/waiting
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 46ms (View: 43, DB: 0) | 200 OK [http://0.0.0.0/rsvps/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-08 19:01:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (80.2ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 169ms (View: 132, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-08 19:01:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (1.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (234.2ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_form (27.6ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 427ms (View: 416, DB: 2) | 200 OK [http://0.0.0.0/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-08 19:01:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.2ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (12.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/]

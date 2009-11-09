@@ -1,4 +1,7 @@
+<p>Regrettably, we are unable to allow open attendance to the ceremony.  Please complete this form only if you have received a formal invitation.</p>
 <% form_for @rsvp do |f| %>
+	<%= trap_door_field %>
+	
   <%= f.error_messages :header_message => nil, :message => "Please correct the following problems and submit the form again." %>
 	<ol>
 		<li>
@@ -10,7 +13,7 @@
 			<%= f.select :attending, "<option value='true'>Yes, I will be in attendance</option><option value='false'>No, I am unable to attend</option>" %>
 		</li>
 		<li>
-			<%= f.label :guest_count, "Guests in attendance (including yourself):" %>
+			<%= f.label :guest_count, "Total number of guests in your party (including yourself):" %>
 			<%= f.text_field :guest_count, :value => 1 %>
 		</li>
 		<li>
