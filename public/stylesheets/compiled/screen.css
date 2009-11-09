@@ -145,7 +145,8 @@ body ol li, body ul li { list-style-type: none; margin-left: 0px; }
 
 .gallery { display: inline; float: left; margin-right: 10px; width: 222.222px; text-align: center; }
 * html .gallery { overflow-x: hidden; }
-.gallery h4 { color: inherit; margin-bottom: 0; }
+.gallery a h4 { color: inherit; margin-bottom: 0; }
+.gallery a img { width: 222.222px; }
 
 #gallery { position: relative; }
 #gallery #gallery_title { text-align: center; }

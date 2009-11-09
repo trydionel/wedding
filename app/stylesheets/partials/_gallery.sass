@@ -4,9 +4,12 @@
 .gallery
   +column((!blueprint_grid_columns - 2) / 3)
   :text-align center
-  h4
-    :color inherit
-    :margin-bottom 0
+  a
+    h4
+      :color inherit
+      :margin-bottom 0
+    img
+      +span((!blueprint_grid_columns - 2) / 3)
 
 #gallery
   :position relative

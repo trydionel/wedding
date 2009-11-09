@@ -1,4 +1,4 @@
-<div class="gallery <%= (gallery_counter + 1) % 3 == 0 ? 'last' : nil %>">
+<div class="gallery<%= (gallery_counter + 1) % 3 == 0 ? ' last' : nil %>">
   <% link_to gallery_path(gallery) do %>
     <%= image_tag gallery.preview_thumbnail_url %>
     <h4><%= gallery.title %></h4>

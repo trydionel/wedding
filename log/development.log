@@ -11848,3 +11848,278 @@ Rendering articles/index
 Rendered articles/_article (12.4ms)
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 45ms (View: 37, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:09:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.9ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (11.6ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 55ms (View: 46, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:09:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.9ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (11.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 42ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:09:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (80.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.3ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 112ms (View: 104, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:09:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:10:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:10:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 42ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-08 19:10:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:10:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (1.0ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (10.7ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (2.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 44ms (View: 35, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:11:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.4ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.2ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 42ms (View: 33, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:11:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.2ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 42ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:12:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.9ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (10.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.3ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 45ms (View: 36, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:12:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.8ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.8ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.4ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.2ms)
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 41ms (View: 32, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:12:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 43ms (View: 34, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:13:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.9ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (9.6ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (2.3ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 48ms (View: 39, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:13:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (11.5ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (1.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 50ms (View: 41, DB: 2) | 200 OK [http://0.0.0.0/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2009-11-08 19:14:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"galleries"}
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Rendered galleries/_gallery (13.1ms)
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Rendered galleries/_gallery (4.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Rendered galleries/_gallery (2.3ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 51ms (View: 41, DB: 4) | 200 OK [http://0.0.0.0/galleries]

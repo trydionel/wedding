@@ -6,7 +6,7 @@ class Gallery < ActiveRecord::Base
     unless photos.empty?
       photos.first.image.url(:thumbnail)
     else
-      "public/images/missing.png"
+      "missing.png"
     end
   end
 end
