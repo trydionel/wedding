@@ -112,11 +112,11 @@ body .top { margin-top: 0; padding-top: 0; }
 body .bottom { margin-bottom: 0; padding-bottom: 0; }
 body .notice { padding: .8em; margin-bottom: 1em; border: 2px solid #dddddd; background: #e6efc2; color: #264409; border-color: #c6d880; }
 body .notice a { color: #264409; }
-body a { color: black; text-decoration: none; }
-body a:visited { color: black; }
-body a:focus { color: black; }
+body a { color: #777788; text-decoration: none; }
+body a:visited { color: #777788; }
+body a:focus { color: #777788; }
 body a:hover { color: #b82222; }
-body a:active { color: black; }
+body a:active { color: #777788; }
 body a:hover { text-decoration: underline; }
 body #poppy { background: url("/images/poppy_alpha.png"); position: absolute; top: 20px; left: 50%; margin-left: 10px; width: 467px; height: 350px; z-index: 100; overflow: visible; }
 body #container { width: 750px; margin: 0 auto; overflow: hidden; display: inline-block; -moz-box-shadow: #333333 0px 0px 25px; -webkit-box-shadow: #333333 0px 0px 25px; box-shadow: #333333 0px 0px 25px; background-color: #f2f0d5; position: relative; top: 75px; }

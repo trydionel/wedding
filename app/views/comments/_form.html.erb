@@ -1,15 +1,15 @@
   <%= trap_door_field %>
 	<ol>
 		<li>
-			<p>Name:</p>
+			<%= form.label :author, "Name:" %>
 			<%= form.text_field :author %>
 		</li>
 		<li>
-			<p>Email: (will not be shown)</p>
+			<%= form.label :email, "Email: (will not be shown)" %>
 			<%= form.text_field :email %>
 		</li>
 		<li>
-			<p>Comment:</p>
+			<%= form.label :comment, "Comment" %>
 			<%= form.text_area :body %>
 		</li>
 		<li>

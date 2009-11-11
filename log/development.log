@@ -12374,3 +12374,63 @@ Rendering articles/index
 Rendered articles/_article (12.1ms)
   [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 41ms (View: 33, DB: 2) | 200 OK [http://0.0.0.0/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-11 08:56:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (26.1ms)
+Completed in 69ms (View: 59, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-11 08:57:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (230.1ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (28.9ms)
+Completed in 324ms (View: 314, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-11 08:59:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;35;1mComment Load (1.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_form (4.0ms)
+Completed in 127ms (View: 116, DB: 2) | 200 OK [http://localhost/articles/1]
