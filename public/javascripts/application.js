@@ -27,9 +27,5 @@ document.observe('dom:loaded', function() {
   // Fade out flash boxes
   $$('.fade').each(function(element) {
     new Effect.Fade(element, { delay: 5 });
-  });
-  
-  $$('.ajaxForm').each(function(element) {
- 		
- 	)};
+  });  
 });
