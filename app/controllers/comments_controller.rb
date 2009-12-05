@@ -22,6 +22,16 @@ class CommentsController < ApplicationController
       render :action => :new
     end
   end
+  
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      flash[:notice] = "Successfully deleted comment"
+      redirect_to(@comment.commentable)
+    else
+      redirect_to root_url
+    end
+  end
 
   protected
   
