@@ -1,7 +1,5 @@
 <% unless @articles.empty? %>
-	<ol>
-		<%= render @articles %>
-	</ol>
+	<%= render :partial => @articles, :spacer_template => "shared/spacer", :layout => "shared/list" %>
 <% else %>
 	<p>No articles available yet!</p>
 <% end%>

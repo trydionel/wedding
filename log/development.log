@@ -12434,3 +12434,242 @@ Rendered comments/_comment (0.5ms)
 Rendered comments/_comment (0.5ms)
 Rendered comments/_form (4.0ms)
 Completed in 127ms (View: 116, DB: 2) | 200 OK [http://localhost/articles/1]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:38:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (28.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (155.8ms)
+Completed in 389ms (View: 292, DB: 30) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:38:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (11.4ms)
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:38:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.4ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (12.2ms)
+Completed in 35ms (View: 28, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:39:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.1ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (10.9ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-14 15:39:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (213.5ms)
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_form (24.9ms)
+Completed in 403ms (View: 394, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-11-14 15:39:41) [POST]
+  Parameters: {"commit"=>"Submit", "affiliate_id"=>"", "action"=>"create", "authenticity_token"=>"rxVHBlK+u3yvzBYwxzFyV3B7wA6J+CTuNIHKveVH/s0=", "controller"=>"comments", "article_id"=>"1", "comment"=>{"commentable_type"=>"Article", "body"=>"test", "author"=>"Test", "commentable_id"=>"1", "email"=>"test"}}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("commentable_type", "updated_at", "body", "author", "commentable_id", "created_at", "email") VALUES('Article', '2009-11-14 20:39:41', 'test', 'Test', 1, '2009-11-14 20:39:41', 'test')[0m
+  [4;35;1mArticle Load (0.9ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Sent mail to trydionel@gmail.com, thymebombe@yahoo.com
+
+Date: Sat, 14 Nov 2009 15:39:41 -0500
+From: notifications@tuckerhuftwedding.com
+To: trydionel@gmail.com, thymebombe@yahoo.com
+Subject: New Comment
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>Test commented on the Article "Tester Article"</p>
+<blockquote>
+test
+</blockquote>
+
+<p>To view the comment, <a href="http://localhost:3000/articles/1">click here</a>.</p>
+Rendering comments/create
+Rendered comments/_comment (1.5ms)
+Completed in 230ms (View: 107, DB: 2) | 200 OK [http://localhost/articles/1/comments]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-11-14 15:41:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (2.9ms)
+Completed in 49ms (View: 40, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:41:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (11.6ms)
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:41:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (11.1ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:41:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (11.3ms)
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:41:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (11.6ms)
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-14 15:42:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;35;1mArticle Load (1.1ms)[0m   [0mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (10.9ms)
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-11-21 12:04:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (29.0ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered shared/_spacer (0.4ms)
+  [4;35;1mSQL (1.6ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (144.4ms)
+Rendered shared/_list (0.7ms)
+Completed in 348ms (View: 250, DB: 31) | 200 OK [http://0.0.0.0/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-12-05 16:45:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"articles"}
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering articles/index
+Rendered shared/_spacer (0.4ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered articles/_article (128.8ms)
+Rendered shared/_list (0.6ms)
+Completed in 256ms (View: 197, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-12-05 16:45:51) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"articles"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) ORDER BY created_at DESC[0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+  [4;36;1mComment Load (1.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".commentable_id = 1 AND "comments".commentable_type = 'Article') [0m
+Rendered comments/_comment (288.0ms)
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (5.4ms)
+Completed in 353ms (View: 342, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-05 16:45:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 57ms (View: 44, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-12-05 16:46:04) [POST]
+  Parameters: {"commit"=>"Log in", "user_session"=>{"username"=>"jeff", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"BO7m0mtIv50irXEIiWT+UsiukKpGtETNxlkucbSNVRc=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".username) = 'jeff') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 265ms (View: 15, DB: 0) | 200 OK [http://localhost/user_sessions]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-12-05 16:46:12) [POST]
+  Parameters: {"commit"=>"Log in", "user_session"=>{"username"=>"jeff", "password"=>"[FILTERED]"}, "action"=>"create", "authenticity_token"=>"BO7m0mtIv50irXEIiWT+UsiukKpGtETNxlkucbSNVRc=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'jeff') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 31ms (View: 14, DB: 0) | 200 OK [http://localhost/user_sessions]

@@ -2,5 +2,8 @@
 	<h5><%= comment.author %></h5>
 	<small><%= comment.created_at.to_s(:long) %></small>
 	<p><%= comment.body %></p>
+	<% if current_user %>
+	  <%= link_to "Delete", comment_path(comment), :method => :delete, :confirm => "Are you sure?" %>
+	<% end %>
 	<hr />
 <% end %>
