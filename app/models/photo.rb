@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
     :styles => { :thumbnail => "100x100>", :large => "800x600>"},
     :convert_options => { :all => "-auto-orient" },
     :storage => :s3,
-    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :s3_credentials => { :access_key_id => ENV['s3_access_key_id'], :secret_access_key => ENV['s3_secret_access_key'] },
     :path => ":attachment/:id/:style.:extension",
     :bucket => "wedding_photos"
     
